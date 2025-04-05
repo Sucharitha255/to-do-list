@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Day</title>
+</head>
+<body>
+    <div class="container">
+    <header><h1><strong>MY DAY</strong></h1></header>
+
+    <div class="tabs">
+        <button class="tab-button" onclick="opentab('calendar')">calendar</button>
+    
+        <button class="tab-button" onclick="opentab('Journaling')">Journaling</button>
+        <button class="tab-button" onclick="opentab('to-do list')">To-do list</button>
+        <button class="tab-button" onclick="opentab('Highlights')">Highlights of today</button>
+        <button>Upcoming alarms</button>
+    </div>
+    <div class="content">
+        <!-- Calendar Section -->
+        <div id="calendar" class="tab-content">
+            <h2>March</h2>
+    <table>
+        <tr>
+            <th>Sun</th> <th>Mon</th> <th>Tue</th> <th>Wed</th> <th>Thu</th> <th>Fri</th> <th>Sat</th>
+        </tr>
+        <tr> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> </tr>
+        <tr> <td>9</td> <td>10</td> <td>11</td> <td>12</td> <td>13</td> <td>14</td> <td>15</td> </tr>
+        <tr> <td>16</td> <td>17</td> <td>18</td> <td>19</td> <td>20</td> <td>21</td> <td>22</td> </tr>
+        <tr> <td>23</td> <td>24</td> <td>25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> </tr>
+    </table>
+    </div>
+
+    <!-- To-Do List tick mark -->
+    <div id="todo" class="tab-content">
+        <h2>To-Do List</h2>
+        <input type="text" id="todoInput" placeholder="Add a task...">
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+    </div>
+   
+                
+    <!-- Upcoming Alarms :alarm should ring at that time notification should pop -->
+        <div id="alarms" class="tab-content">
+            <h2>Upcoming Alarms</h2>
+            <input type="time" id="alarmTime">
+            <button onclick="setAlarm()">Set Alarm</button>
+            <p id="alarmMessage"></p>
+        </div>
+    <script src="script.js"></script>
+    
+
+    </div>
+
+    <!-- Diary Section -->
+    <div id="diary" class="tab-content">
+        <h2>How's your day, buddy?</h2>
+        <textarea id="diaryEntry" placeholder="Let me know!"></textarea>
+        <button onclick="saveDiary()">Save</button>
+    </div>
+    <p>How was your day??</p>
+    
+    
+</body>
+</html>
